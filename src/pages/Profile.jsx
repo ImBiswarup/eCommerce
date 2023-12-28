@@ -7,6 +7,7 @@ import { FaWallet } from "react-icons/fa";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { FaPowerOff } from "react-icons/fa";
 import { Link } from "react-router-dom"
+import { FAQ } from "../utils/Constant"
 
 
 const Profile = () => {
@@ -309,90 +310,27 @@ const Profile = () => {
                     <div className="update-btn mt-4 sm:flex sm:items-center">
                         <button className='bg-white text-orange-400 hover:bg-orange-400 hover:text-white rounded p-1.5'>Update Changes</button>
                     </div>
-                    <div className="FAQ mt-6">
-                        <div className="">
+                    <div className="FAQ mt-6 ">
+                        <div className="mb-4">
                             <b>FAQ</b>
                         </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="text mb-4">
-                            <div className="qstn">
-                                <b>What happens when I update my email address (or mobile number)?</b>
-                            </div>
-                            <div className="ans">
-                                <h2>
-                                    Your login email id (or mobile number) changes, likewise. You'll receive all your account related communication on your updated email address (or mobile number).
-                                </h2>
-                            </div>
-                        </div>
+                        {
+                            FAQ.map((item) => {
+                                return (
+
+                                    <div className="text mb-4">
+                                        <div className="qstn">
+                                            <b>{item.question}</b>
+                                        </div>
+                                        <div className="ans">
+                                            <h2>
+                                                {item.answer}
+                                            </h2>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                         <div className="deactivate-account mb-8">
                             <span className='cursor-pointer hover:text-blue-600' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })} >
                                 <h2 className='hover:text-blue-600 inline-block p-2 hover:bg-gray-200 rounded'>

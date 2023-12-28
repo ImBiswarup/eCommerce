@@ -10,8 +10,7 @@ import Product from '../components/Product';
 const ProductDetails = () => {
 
   const { isOpen, HandleClose } = useContext(SidebarContext);
-
-  const { filterProducts } = useContext(ProductContext);
+  const { filterProducts } = useContext(ProductContext)
 
   const [clickOnCart, setClickOnCart] = useState(false)
 
@@ -79,6 +78,24 @@ const ProductDetails = () => {
                 Buy Now
               </button>
             </div>
+          </div>
+          <div className="font-bold mt-4 mb-5">
+            Suggested Products
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-7 max-w-sm mx-auto md:max-w-none md:mx-0">
+            {
+              filterProducts ? (
+                filterProducts.map((product) => (
+                  <Product product={product} key={product.id} />
+                ))
+              )
+                :
+                (
+                  <div className="w-full h-screen justify-center items-center flex">
+                    <div className="loader"></div>
+                  </div>
+                )
+            }
           </div>
         </div>
       </section>

@@ -8,13 +8,13 @@ const Footer = () => {
     <footer className='bg-primary py-2 text-white flex items-center justify-around'>
       <div className="container-mx-auto ">
         <p className='text-white text-center'>
-          Ecommerce WebApp made by
+          eCommerce WebApp made by
           <span className='hover:text-blue-500'>
             <a href="https://github.com/ImBiswarup" target='_blank'> Biswarup Ghosh</a>
           </span>
         </p>
       </div>
-      <div className="sm:flex-col sm:flex hidden gap-y-2">
+      <div className="md:flex-col md:flex hidden gap-y-2">
         <div className="flex">
           <div className="logo">
             <img className='h-5 w-5 rounded mr-2 bg-white hover:bg-pink-400 hover:cursor-pointer' src={instagram} alt="" />

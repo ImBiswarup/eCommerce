@@ -10,9 +10,9 @@ const Hero = () => {
         <div className="flex flex-col justify-center">
           <div className="uppercase font-semibold flex items-center">
             <div className="w-8 h-0.5 bg-rose-500 mr-3"></div>
-          </div>New trending
-          <h1 className='text-[70px] leading-[1.1] font-light mb-4'>Diwali Sale <br />
-            <span className='font-semibold'>Women</span>
+          </div>New Trending
+          <h1 className='text-[70px] leading-[1.1] font-light mb-4'>New Year Sale <br />
+            <span className='font-semibold'>For Men & Women</span>
           </h1>
           <Link to={'/'} className='self-start uppercase font-semibold border-primary cursor-pointer'
             onClick={() => window.scrollTo(0, window.innerHeight)}

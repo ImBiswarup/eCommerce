@@ -8,7 +8,7 @@ const PaymentPage = () => {
                     Still under process... <br />
                 </h1>
                 <br />
-            <div className="loader"></div>
+                <div className="loader"></div>
             </div>
         </>
     )

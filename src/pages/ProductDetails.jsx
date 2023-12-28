@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 import { ProductContext } from '../contexts/ProductContext';
 import { SidebarContext } from '../contexts/SidebarContext';
@@ -30,11 +30,13 @@ const ProductDetails = () => {
 
   if (!product) {
     return (
-
-      <div className="w-full h-screen justify-center items-center flex">
+      <div className="w-full h-screen justify-center items-center flex flex-col">
+        <h1 className='text-3xl font-bold'>
+          Hold a moment... <br />
+        </h1>
+        <br />
         <div className="loader"></div>
       </div>
-
     )
   }
 
@@ -66,36 +68,18 @@ const ProductDetails = () => {
               <p className="mb-4">{description}</p>
               <button
                 onClick={() => myFunction()}
-                className="text-primary bg-white hover:bg-primary py-2 px-4 lg:py-4 lg:px-8 hover:text-white rounded mb-2 lg:mb-0"
+                className="bg-transparent text-black hover:outline py-2 px-4 lg:py-4 lg:px-8  rounded mb-2 lg:mb-0"
               >
                 {clickOnCart
-                  ? (isOpen ? "Shop more" : "Go to Cart ->")
+                  ? (isOpen ? "Shop more" : "Go to Cart")
                   : "Add to cart"}
               </button>
-              <button
-                className="text-primary bg-white hover:bg-primary py-2 px-4 lg:py-4 lg:px-8 hover:text-white rounded"
+              <Link to={"/payment"}
+                className="bg-transparent text-black hover:outline py-2 px-4 lg:py-4 lg:px-8  rounded"
               >
                 Buy Now
-              </button>
+              </Link>
             </div>
-          </div>
-          <div className="font-bold mt-4 mb-5">
-            Suggested Products
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-7 max-w-sm mx-auto md:max-w-none md:mx-0">
-            {
-              filterProducts ? (
-                filterProducts.map((product) => (
-                  <Product product={product} key={product.id} />
-                ))
-              )
-                :
-                (
-                  <div className="w-full h-screen justify-center items-center flex">
-                    <div className="loader"></div>
-                  </div>
-                )
-            }
           </div>
         </div>
       </section>

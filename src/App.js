@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Profile from './pages/Profile';
+import Payment from "./pages/PaymentPage";
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductDetails />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/payment' element={<Payment />} />
       </Routes>
       <Sidebar />
       <Footer />

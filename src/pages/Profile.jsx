@@ -23,7 +23,7 @@ const Profile = () => {
 
     return (
         <div className='h-screen flex sticky font-semibold'>
-            <div className='sm:w-[30%] overflow-x-hidden overflow-y-auto no-scrollbar sm:flex sm:justify-center hidden'>
+            <div className='md:w-[30%] overflow-x-hidden overflow-y-auto no-scrollbar md:flex md:justify-center hidden'>
                 <div className="details w-full h-screen">
                     <div className="w-full rounded text-black flex flex-col items-center justify-center mt-20">
                         <div className='flex items-center hover:bg-gray-200 gap-6 w-full md:w-[90%] rounded cursor-pointer'>
